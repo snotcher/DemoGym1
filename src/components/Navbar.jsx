@@ -43,15 +43,15 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
+        <div className={`hamburger ${click ? 'active' : ''}`} onClick={handleClick}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+
         <a href="#hero" className="logo" onClick={closeMobileMenu}>
           IRON<span>ZONE</span>
         </a>
-
-        <div className="hamburger" onClick={handleClick}>
-          <span className={click ? 'bar active' : 'bar'}></span>
-          <span className={click ? 'bar active' : 'bar'}></span>
-          <span className={click ? 'bar active' : 'bar'}></span>
-        </div>
 
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
